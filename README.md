@@ -1,25 +1,11 @@
-# Ember-cli-chrome-apps
+# Ember CLI Mobile Chrome Apps
 
-This README outlines the details of collaborating on this Ember addon.
+This Ember Addon provides commands to build your project as a chrome or cordova app, using Google's [MobileChromeApps](https://github.com/MobileChromeApps/mobile-chrome-apps)
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`npm install ember-cli-mobile-chrome-apps`
 
-## Running
+## Development
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+This project is still a work in progress
