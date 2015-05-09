@@ -12,7 +12,13 @@
   "license": "MIT",
   "devDependencies": {},
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "chrome",
+    "cordova",
+    "ember",
+    "ember-cli",
+    "mobile",
+    "app"
   ],
   "dependencies": {
     "cca": "^0.7.0",

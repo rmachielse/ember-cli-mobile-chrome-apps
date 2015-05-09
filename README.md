@@ -63,4 +63,4 @@ It will also generate the `external/cordova` folder that contains the cordova pr
 
 ## License
 
-This project is released under the [MIT license](LICENSE.md).
+This project is released under the [MIT License](LICENSE.md).
