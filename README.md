@@ -4,7 +4,11 @@ This Ember Addon provides commands to build your project as a chrome or cordova 
 
 ## Installation
 
-`npm install ember-cli-mobile-chrome-apps`
+Install the addon by running:
+
+```
+npm install ember-cli-mobile-chrome-apps
+```
 
 ## Usage
 
@@ -29,8 +33,8 @@ This way you can manage which parts of your Ember CLI app will be added to your 
 - `ember chrome:build`
   This command builds the chrome app from the `external/chrome` folder.
   It will generate a `ProjectName.zip` and a signed `ProjectName.crx` file in `external/chrome`.
-  You can specify the key using the --key argument. If no key exists it will be automatically generated.
-  The command will also build your ember cli project (you can skip this using --skip-build or change the environment using --environment).
+  You can specify the key using the `--key` argument. If no key exists it will be automatically generated.
+  The command will also build your ember cli project (you can skip this using `--skip-build` or change the build environment using `--environment`).
 
 ### Cordova
 
@@ -40,7 +44,7 @@ If you have a working chrome app you can add cordova by running:
 ember g cordova
 ```
 
-This will generate a second `manifest.mobile.json` file in `external/chrome` that contains your app's packageId (for example com.example.Projectname).
+This will generate a `manifest.mobile.json` file in `external/chrome` that contains your app's `packageId` (for example `com.example.ProjectName`). You can update this to your desired packageId.
 It will also generate the `external/cordova` folder that contains the cordova project.
 
 - `ember cordova:checkenv`
@@ -50,11 +54,11 @@ It will also generate the `external/cordova` folder that contains the cordova pr
 - `ember cordova:run`
   The run command can be used to emulate the app or deploy it to a developer device.
   For example `ember cordova:run --android --emulate` will emulate your android app.
-  `ember cordova:run --ios --device will deploy the app to a developer iOS device.
+  `ember cordova:run --ios --device` will deploy the app to an iOS developer device.
 - `ember cordova:upgrade`
   This command can be used to upgrade your cordova project when a new version of google's `cca` is being released.
-  You'll be prompted to do so when you build and there is an update as well.
+  You'll also be prompted to do so when you build the app and there is an update.
 
 ## License
 
-MIT
+This project is released under the MIT license.
