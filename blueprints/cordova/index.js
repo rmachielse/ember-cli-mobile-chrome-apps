@@ -13,11 +13,16 @@ module.exports = {
   afterInstall: function(options) {
     var cca = require('../../lib/utils/cca');
     var cmd = require('../../lib/utils/cmd');
+    var _this = this;
 
-    return cmd(cca, [
-      'create',
-      options.project.root + '/external/cordova',
-      '--link-to=' + options.project.root + '/external/chrome/manifest.json'
-    ], { logStdout: false });
+    return new Promise(function(resolve, reject) {
+      cmd(cca, [
+        'create',
+        options.project.root + '/external/cordova',
+        '--link-to=' + options.project.root + '/external/chrome/manifest.json'
+      ], { logStdout: false }).then(function(){
+        _this.insertIntoFile('.gitignore', '/external/cordova').then(resolve, reject);
+      }, reject);
+    })
   }
 }

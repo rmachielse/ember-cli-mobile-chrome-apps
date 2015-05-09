@@ -14,6 +14,8 @@ module.exports = {
 
   afterInstall: function(options) {
     var fs = require('fs');
+    var dasherize = require('../../lib/utils/dasherize');
+    var _this = this;
 
     return new Promise(function(resolve, reject){
       if (!fs.existsSync(options.project.root + '/external/chrome/assets')) {
@@ -22,7 +24,13 @@ module.exports = {
       if (!fs.existsSync(options.project.root + '/external/chrome/window.html')) {
         fs.symlinkSync('../../dist/index.html', options.project.root + '/external/chrome/window.html');
       }
-      resolve();
+
+      _this.insertIntoFile('.gitignore', [
+        '',
+        '# external',
+        '/external/chrome/' + dasherize(_this.project.pkg.name) + '.crx',
+        '/external/chrome/' + dasherize(_this.project.pkg.name) + '.zip'
+      ].join('\n')).then(resolve, reject);
     });
   }
 }

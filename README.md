@@ -24,7 +24,7 @@ ember g chrome
 
 This commands generates a folder `external` in the root of your project.
 Both the chrome and cordova apps will appear in it.
-In `external/chrome` you'll find `background.js` and a default `manifest.json` that you can change according to your needs.
+In `external/chrome` you'll find `background.js` and a default `manifest.json` that you can change according to your needs. For more information about the manifest [see this link](https://developer.chrome.com/apps/first_app).
 
 You can add files and folders from your `dist` to the chrome app by copying or symlinking them in the `external/chrome` directory.
 `window.html` and the `assets` folder have already been added as a default.
@@ -35,6 +35,8 @@ This way you can manage which parts of your Ember CLI app will be added to your 
   It will generate a `ProjectName.zip` and a signed `ProjectName.crx` file in `external/chrome`.
   You can specify the key using the `--key` argument. If no key exists it will be automatically generated.
   The command will also build your ember cli project (you can skip this using `--skip-build` or change the build environment using `--environment`).
+
+During development you don't have to build your project all the time, you can just go to `chrome://extensions` with chrome and click 'Load unpacked extension'. Then choose the `external/chrome` folder and you'll see the app appear in chrome.
 
 ### Cordova
 
@@ -61,4 +63,4 @@ It will also generate the `external/cordova` folder that contains the cordova pr
 
 ## License
 
-This project is released under the MIT license.
+This project is released under the [MIT license](LICENSE.md).
