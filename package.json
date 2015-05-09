@@ -1,9 +1,9 @@
 {
   "name": "ember-cli-mobile-chrome-apps",
   "version": "0.0.1",
-  "description": "Build ember-cli projects as a chrome packaged app",
-  "homepage": "https://github.com/rmachielse/ember-cli-chrome-apps",
-  "repository": "https://github.com/rmachielse/ember-cli-chrome-apps.git",
+  "description": "Build your Ember CLI project as a chrome or cordova app",
+  "homepage": "https://github.com/rmachielse/ember-cli-mobile-chrome-apps",
+  "repository": "https://github.com/rmachielse/ember-cli-mobile-chrome-apps.git",
   "main": "index.js",
   "engines": {
     "node": ">= 0.10.0"
@@ -14,5 +14,9 @@
   "keywords": [
     "ember-addon"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "cca": "^0.7.0",
+    "chalk": "^1.0.0",
+    "crx": "^3.0.2"
+  }
 }

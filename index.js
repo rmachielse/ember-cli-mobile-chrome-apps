@@ -1,3 +1,4 @@
+var path = require('path');
 var commands = require('./lib/commands');
 
 module.exports = {
@@ -5,5 +6,9 @@ module.exports = {
 
   includedCommands: function() {
     return commands;
+  },
+
+  blueprintsPath: function() {
+    return path.join(__dirname, 'blueprints');
   }
 }
