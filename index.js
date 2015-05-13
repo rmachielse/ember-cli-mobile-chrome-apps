@@ -18,4 +18,4 @@ module.exports = {
 
     return path.join(__dirname, 'blueprints');
   }
-}
+};

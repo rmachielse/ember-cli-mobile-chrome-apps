@@ -9,7 +9,7 @@ module.exports = {
       packageName: options.project.pkg.name,
       packageDescription: options.project.pkg.description,
       packageVersion: options.project.pkg.version
-    }
+    };
   },
 
   afterInstall: function(options) {
@@ -33,4 +33,4 @@ module.exports = {
       ].join('\n')).then(resolve, reject);
     });
   }
-}
+};

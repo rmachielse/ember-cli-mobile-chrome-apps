@@ -7,7 +7,7 @@ module.exports = {
     return {
       dasherizedPackageName: dasherize(options.project.pkg.name),
       packageName: options.project.pkg.name
-    }
+    };
   },
 
   afterInstall: function(options) {
@@ -23,6 +23,6 @@ module.exports = {
       ], { logStdout: false }).then(function(){
         _this.insertIntoFile('.gitignore', '/external/cordova').then(resolve, reject);
       }, reject);
-    })
+    });
   }
-}
+};
