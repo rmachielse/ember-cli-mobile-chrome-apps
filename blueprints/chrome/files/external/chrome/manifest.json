@@ -1,5 +1,5 @@
 {
-  "name": "<%= dasherizedPackageName %>",
+  "name": "<%= capitalizedPackageName %>",
   "description": "<%= packageDescription %>",
   "version": "<%= packageVersion %>",
   "manifest_version": 2,

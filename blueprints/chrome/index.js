@@ -2,10 +2,10 @@ module.exports = {
   normalizeEntityName: function() {},
 
   locals: function(options) {
-    var dasherize = require('../../lib/utils/dasherize');
+    var capitalize = require('../../lib/utils/capitalize');
 
     return {
-      dasherizedPackageName: dasherize(options.project.pkg.name),
+      capitalizedPackageName: capitalize(options.project.pkg.name),
       packageName: options.project.pkg.name,
       packageDescription: options.project.pkg.description,
       packageVersion: options.project.pkg.version
@@ -14,7 +14,7 @@ module.exports = {
 
   afterInstall: function(options) {
     var fs = require('fs');
-    var dasherize = require('../../lib/utils/dasherize');
+    var capitalize = require('../../lib/utils/capitalize');
     var _this = this;
 
     return new Promise(function(resolve, reject){
@@ -28,8 +28,8 @@ module.exports = {
       _this.insertIntoFile('.gitignore', [
         '',
         '# external',
-        '/external/chrome/' + dasherize(_this.project.pkg.name) + '.crx',
-        '/external/chrome/' + dasherize(_this.project.pkg.name) + '.zip'
+        '/external/chrome/' + capitalize(_this.project.pkg.name) + '.crx',
+        '/external/chrome/' + capitalize(_this.project.pkg.name) + '.zip'
       ].join('\n')).then(resolve, reject);
     });
   }

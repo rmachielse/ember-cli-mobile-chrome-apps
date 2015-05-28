@@ -2,10 +2,10 @@ module.exports = {
   normalizeEntityName: function() {},
 
   locals: function(options) {
-    var dasherize = require('../../lib/utils/dasherize');
+    var capitalize = require('../../lib/utils/capitalize');
 
     return {
-      dasherizedPackageName: dasherize(options.project.pkg.name),
+      capitalizedPackageName: capitalize(options.project.pkg.name),
       packageName: options.project.pkg.name
     };
   },
