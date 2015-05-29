@@ -1,9 +1,11 @@
+var capitalize = require('../../lib/utils/capitalize');
+var cca = require('../../lib/utils/cca');
+var cmd = require('../../lib/utils/cmd');
+
 module.exports = {
   normalizeEntityName: function() {},
 
   locals: function(options) {
-    var capitalize = require('../../lib/utils/capitalize');
-
     return {
       capitalizedPackageName: capitalize(options.project.pkg.name),
       packageName: options.project.pkg.name
@@ -11,8 +13,6 @@ module.exports = {
   },
 
   afterInstall: function(options) {
-    var cca = require('../../lib/utils/cca');
-    var cmd = require('../../lib/utils/cmd');
     var _this = this;
 
     return new Promise(function(resolve, reject) {

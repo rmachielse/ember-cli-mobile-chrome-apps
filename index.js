@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   name: 'ember-cli-mobile-chrome-apps',
 
@@ -8,14 +10,10 @@ module.exports = {
   },
 
   includedCommands: function() {
-    var commands = require('./lib/commands');
-
-    return commands;
+    return require('./lib/commands');
   },
 
   blueprintsPath: function() {
-    var path = require('path');
-
     return path.join(__dirname, 'blueprints');
   }
 };
