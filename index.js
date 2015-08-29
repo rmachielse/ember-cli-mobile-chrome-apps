@@ -5,7 +5,9 @@ module.exports = {
 
   included: function(app) {
     if (process.argv[2] === 'chrome:build') {
-      app.options.fingerprint.enabled = false;
+      app.options.fingerprint = {
+        enabled: false
+      };
     }
   },
 
