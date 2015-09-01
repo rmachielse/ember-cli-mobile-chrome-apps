@@ -22,21 +22,21 @@ First generate the chrome app by running:
 ember g chrome
 ```
 
-This commands generates a folder `external` in the root of your project.
+This commands generates a folder `apps` in the root of your project.
 Both the chrome and cordova apps will appear in it.
-In `external/chrome` you'll find `background.js` and a default `manifest.json` that you can change according to your needs. For more information about the manifest [see this link](https://developer.chrome.com/apps/first_app).
+In `apps/chrome` you'll find `background.js` and a default `manifest.json` that you can change according to your needs. For more information about the manifest [see this link](https://developer.chrome.com/apps/first_app).
 
-You can add files and folders from your `dist` to the chrome app by copying or symlinking them in the `external/chrome` directory.
+You can add files and folders from your `dist` to the chrome app by copying or symlinking them in the `apps/chrome` directory.
 `window.html` and the `assets` folder have already been added as a default.
 This way you can manage which parts of your Ember CLI app will be added to your chrome app.
 
 - `ember chrome:build`
-  This command builds the chrome app from the `external/chrome` folder.
-  It will generate a `ProjectName.zip` and a signed `ProjectName.crx` file in `external/chrome`.
-  You can specify the key using the `--key` argument. If no key exists it will be automatically generated.
+  This command builds the chrome app from the `apps/chrome` folder.
+  It will generate a `project_name.zip` and a signed `project_name.crx` file in `apps/chrome/dist`.
+  You can specify the key in the `config/mobile-chrome-apps.js` file.
   The command will also build your ember cli project (you can skip this using `--skip-build` or change the build environment using `--environment`).
 
-During development you don't have to build your project all the time, you can just go to `chrome://extensions` with chrome and click 'Load unpacked extension'. Then choose the `external/chrome` folder and you'll see the app appear in chrome.
+During development you don't have to build your project all the time, you can just go to `chrome://extensions` with chrome and click 'Load unpacked extension'. Then choose the `apps/chrome` folder and you'll see the app appear in chrome.
 
 ### Cordova
 
@@ -46,8 +46,8 @@ If you have a working chrome app you can add cordova by running:
 ember g cordova
 ```
 
-This will generate a `manifest.mobile.json` file in `external/chrome` that contains your app's `packageId` (for example `com.example.ProjectName`). You can update this to your desired packageId.
-It will also generate the `external/cordova` folder that contains the cordova project.
+This will generate a `manifest.mobile.json` file in `apps/chrome` that contains your app's `packageId` (for example `com.example.ProjectName`). You can update this to your desired packageId.
+It will also generate the `apps/cordova` folder that contains the cordova project.
 
 - `ember cordova:checkenv`
   Before being able to use cordova properly you should run this command to verify that you have set up your working environments for Android and iOS correctly.

@@ -18,10 +18,10 @@ module.exports = {
     return new Promise(function(resolve, reject) {
       cmd(cca, [
         'create',
-        options.project.root + '/external/cordova',
-        '--link-to=' + options.project.root + '/external/chrome/manifest.json'
+        options.project.root + '/apps/cordova',
+        '--link-to=' + options.project.root + '/apps/chrome/manifest.json'
       ], { logStdout: false }).then(function(){
-        _this.insertIntoFile('.gitignore', '/external/cordova').then(resolve, reject);
+        _this.insertIntoFile('.gitignore', '/apps/cordova').then(resolve, reject);
       }, reject);
     });
   }

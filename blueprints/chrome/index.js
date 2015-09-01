@@ -17,18 +17,17 @@ module.exports = {
     var _this = this;
 
     return new Promise(function(resolve, reject){
-      if (!fs.existsSync(options.project.root + '/external/chrome/assets')) {
-        fs.symlinkSync('../../dist/assets', options.project.root + '/external/chrome/assets', 'dir');
+      if (!fs.existsSync(options.project.root + '/apps/chrome/assets')) {
+        fs.symlinkSync('../../dist/assets', options.project.root + '/apps/chrome/assets', 'dir');
       }
-      if (!fs.existsSync(options.project.root + '/external/chrome/window.html')) {
-        fs.symlinkSync('../../dist/index.html', options.project.root + '/external/chrome/window.html');
+      if (!fs.existsSync(options.project.root + '/apps/chrome/window.html')) {
+        fs.symlinkSync('../../dist/index.html', options.project.root + '/apps/chrome/window.html');
       }
 
       _this.insertIntoFile('.gitignore', [
         '',
-        '# external',
-        '/external/chrome/' + capitalize(_this.project.pkg.name) + '.crx',
-        '/external/chrome/' + capitalize(_this.project.pkg.name) + '.zip'
+        '# apps',
+        '/apps/chrome/dist',
       ].join('\n')).then(resolve, reject);
     });
   }
