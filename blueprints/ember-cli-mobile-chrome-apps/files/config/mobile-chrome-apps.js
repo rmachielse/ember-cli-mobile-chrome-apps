@@ -6,4 +6,4 @@ module.exports = {
   // outputPath: 'apps/chrome/dist',
   // keyPath: 'apps/key.pem',
   // codebase: ''
-}
+};

@@ -8,9 +8,19 @@
   "engines": {
     "node": ">= 0.10.0"
   },
+  "scripts": {
+    "test": "node tests/runner.js"
+  },
   "author": "Richard Machielse <richardmachielse@gmail.com>",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "ember-cli": "^1.13.8",
+    "glob": "^5.0.15",
+    "mocha": "^2.3.3",
+    "mocha-sinon": "^1.1.4",
+    "sinon": "^1.17.1"
+  },
   "keywords": [
     "ember-addon",
     "chrome",

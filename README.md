@@ -1,4 +1,5 @@
 # Ember CLI Mobile Chrome Apps
+[![Build Status](https://travis-ci.org/rmachielse/ember-cli-mobile-chrome-apps.svg?branch=master)](https://travis-ci.org/rmachielse/ember-cli-mobile-chrome-apps)
 
 This Ember Addon provides commands to build your project as a chrome or cordova app, using Google's [MobileChromeApps](https://github.com/MobileChromeApps/mobile-chrome-apps)
 
