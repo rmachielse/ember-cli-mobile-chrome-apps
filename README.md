@@ -33,7 +33,7 @@ This way you can manage which parts of your Ember CLI app will be added to your 
 - `ember chrome:build`
   This command builds the chrome app from the `apps/chrome` folder.
   It will generate a `project_name.zip` and a signed `project_name.crx` file in `apps/chrome/dist`.
-  You can specify the key in the `config/mobile-chrome-apps.js` file.
+  You can specify the location of the key in the `config/mobile-chrome-apps.js` file.
   The command will also build your ember cli project (you can skip this using `--skip-build` or change the build environment using `--environment`).
 
 During development you don't have to build your project all the time, you can just go to `chrome://extensions` with chrome and click 'Load unpacked extension'. Then choose the `apps/chrome` folder and you'll see the app appear in chrome.
@@ -60,6 +60,11 @@ It will also generate the `apps/cordova` folder that contains the cordova projec
 - `ember cordova:upgrade`
   This command can be used to upgrade your cordova project when a new version of google's `cca` is being released.
   You'll also be prompted to do so when you build the app and there is an update.
+
+### Known limitations
+
+- Both chrome and cordova apps seem not yet able to handle pushState. Make sure `locationType` is set to `hash` in your `config/environment.js` file.
+- Depending on your configuration, you might need to disable fingerprinting. If you have symlinked `apps/chrome/window.html` to `dist/index.html`, the asset urls in `app/index.html` will be compiled like normal. However, if you have a different window.html, it will not be compiled and thus will not be able to handle fingerprinted assets. In that case you have to disable it in `ember-cli-build.js` by setting `fingerprint` to `{ enabled: false }`.
 
 ## License
 
