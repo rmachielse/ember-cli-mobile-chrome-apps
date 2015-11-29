@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/rmachielse/ember-cli-mobile-chrome-apps.svg?branch=master)](https://travis-ci.org/rmachielse/ember-cli-mobile-chrome-apps)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-mobile-chrome-apps.svg)](http://emberobserver.com/addons/ember-cli-mobile-chrome-apps)
 
+**Google has quit active development of [cca](https://github.com/MobileChromeApps/mobile-chrome-apps). Therefor this plugin has been deprecated. Chrome apps can now be generated through [ember-cli-deploy](http://ember-cli.github.io/ember-cli-deploy/) with the [ember-cli-deploy-chrome-app](https://github.com/rmachielse/ember-cli-deploy-chrome-app) package.**
+
 This Ember Addon provides commands to build your project as a chrome or cordova app, using Google's [MobileChromeApps](https://github.com/MobileChromeApps/mobile-chrome-apps)
 
 ## Installation

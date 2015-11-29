@@ -31,7 +31,7 @@
     "app"
   ],
   "dependencies": {
-    "cca": "^0.7.4",
+    "cca": "^0.8.1",
     "chalk": "^1.1.1",
     "crx": "^3.0.3",
     "es6-promise": "^3.0.2"
